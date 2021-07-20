@@ -7,3 +7,44 @@
 body {
   background-color: rgb(221, 221, 221);
 }
+
+.container {
+  background: white;
+  width: 500px;
+  margin: 100px auto;
+}
+
+.listTitle {
+  align-items: center;
+}
+
+button {
+  background: white;
+  border: none;
+  color: white;
+}
+
+.listTitle,
+.addList,
+.listItem {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 10px;
+  margin-bottom: 1px;
+  border-bottom: 1px solid lightgray;
+}
+
+.listItem div {
+  display: flex;
+}
+
+.checkbox {
+  margin-top: 5px;
+  margin-right: 10px;
+}
+
+.clearBtn {
+  width: 100%;
+  border: transparent;
+  padding: 15px 10px;
+}
