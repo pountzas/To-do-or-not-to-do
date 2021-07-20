@@ -1,8 +1,8 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# TITLE
+# To Do List
 
-> This is an app...
+> This is an app which allows you to create a list of pending tasks to finish, you can add tasks, mark them as completed, and delete them.
 
 
 ## Built With
@@ -21,16 +21,16 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
   
-- NODE.js
+- Node.js
 
 ### Setup
 
 - Use your github account and your terminal to clone this repository to your computer:
 
-`repo link ***************`
+`https://github.com/pountzas/To-Do-List-JS.git`
 
 - Go to the cloned directory:
-`cd repo folder ***********`
+`cd To-Do-List-JS`
 
 - Run the following command to install dependencies:
 `npm install`
