@@ -27,10 +27,10 @@ To get a local copy up and running follow these simple example steps.
 
 - Use your github account and your terminal to clone this repository to your computer:
 
-`https://github.com/pountzas/To-Do-List-JS.git`
+`https://github.com/pountzas/To-do-or-not-to-do.git`
 
 - Go to the cloned directory:
-`cd To-Do-List-JS`
+`cd To-do-or-not-to-do.git`
 
 - Run the following command to install dependencies:
 `npm install`
@@ -62,7 +62,7 @@ Run dist/index.html in your preferred browser.
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](URL).
+Feel free to check the [issues page](https://github.com/pountzas/To-do-or-not-to-do/issues).
 
 ## Show your support
 
