@@ -2,48 +2,39 @@
 /* eslint-disable import/no-duplicates */
 /* eslint-disable no-unused-vars */
 import './style.css';
-import Status from './status';
+import loadCheckboxes from './status';
 import dragStart from './drag';
 import dragEnd from './drag';
 import dragOver from './drag';
 import drop from './drag';
+import addTask from './add';
+import updateStorage from './storage';
+import onClickClear from './delete';
 
 // Define UI vars
 const listDiv = document.getElementById('list');
 const clearBtn = document.querySelector('.clearBtn');
-const taskInput = document.querySelector('#taskInput');
-const checkboxes = document.querySelectorAll('input[type=checkbox]');
+const addList = document.querySelector('.addList');
 
 // eslint-disable-next-line no-unused-expressions
 dragStart; dragEnd; dragOver; drop;
 
-const list = [
-  {
-    description: 'test',
-    completed: false,
-    index: 0,
-  },
-  {
-    description: 'test 2',
-    completed: false,
-    index: 1,
-  },
-  {
-    description: 'test 3',
-    completed: false,
-    index: 2,
-  },
-  {
-    description: 'test 4',
-    completed: false,
-    index: 3,
-  },
-];
-
 // eslint-disable-next-line import/no-mutable-exports
-let sortList = list.sort((a, b) => a.index - b.index);
+const descr = localStorage.getItem('description') ? localStorage.getItem('description').split(',') : [];
+const completed = localStorage.getItem('completed') ? localStorage.getItem('completed').split(',') : [];
+const sortList = [];
+for (let i = 0; i < completed.length; i += 1) {
+  const obj = {
+    description: descr[i],
+    completed: completed[i],
+    index: i,
+  };
+  sortList.push(obj);
+}
 
-function listShow() {
+export function listShow() {
+  const container = document.getElementById('list');
+  container.innerHTML = '';
   for (let i = 0; i < sortList.length; i += 1) {
     const checked = sortList[i].completed === 'true' ? 'checked' : '';
     listDiv.insertAdjacentHTML('beforeend', `
@@ -59,33 +50,10 @@ function listShow() {
   }
 }
 
-if (localStorage.getItem('index') === null) {
-  window.onload = listShow();
-} else {
-  const descr = localStorage.getItem('description') ? localStorage.getItem('description').split(',') : [];
-  const completed = localStorage.getItem('completed') ? localStorage.getItem('completed').split(',') : [];
-  sortList = [];
-  for (let i = 0; i < completed.length; i += 1) {
-    const obj = {
-      description: descr[i],
-      completed: completed[i],
-      index: i,
-    };
-    sortList.push(obj);
-  }
-  window.onload = listShow();
-}
+window.onload = listShow();
 
-function loadCheckboxes() {
-  const checkboxes = document.querySelectorAll('.check');
-  for (let i = 0; i < checkboxes.length; i += 1) {
-    const status = new Status();
-    checkboxes[i].addEventListener('click', (Status) => {
-      const checked = checkboxes[i].checked ? 'true' : 'false';
-      localStorage.setItem(`completed.${i}`, checked);
-    }, false);
-  }
-}
-document.addEventListener('DOMContentLoaded', loadCheckboxes);
+// Add Task
+addList.addEventListener('change', addTask);
 
+loadCheckboxes();
 export default sortList;
