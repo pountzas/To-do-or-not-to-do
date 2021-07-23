@@ -1,9 +1,9 @@
+/* eslint-disable no-unused-vars */
 import updateStorage from './storage';
 // eslint-disable-next-line import/no-cycle
 import sortList from './index';
-import { listShow } from './index';
 
-export default function onClickClear() {
+function onClickClear() {
   // let val = this.value;
   // console.log(sortList.completed);
   for (let i = 0; i < sortList.length; i += 1) {
@@ -18,7 +18,6 @@ export default function onClickClear() {
         // console.log(updateStorage);
         updateStorage(sortList[i]);
       }
-      
     }
   }
   location.reload();
@@ -31,5 +30,11 @@ export default function onClickClear() {
   // 
 }
 
-// eslint-disable-next-line no-unused-vars
+function onClickDelete() {
+  console.log('delete task');
+}
+
 const clearTasks = document.querySelector('.clearBtn').addEventListener('click', onClickClear);
+const taskDel = document.querySelector('.clearBtn').addEventListener('click', onClickDelete);
+
+export default { onClickClear, onClickDelete };
