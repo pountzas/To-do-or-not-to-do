@@ -24,6 +24,11 @@ button {
   color: white;
 }
 
+.trash {
+  background: white;
+  color: red;
+}
+
 .listTitle,
 .addList,
 .listItem {
