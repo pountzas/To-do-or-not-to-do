@@ -1,13 +1,16 @@
-import updateStorage from './storage';
+// eslint-disable-next-line import/no-cycle
+import sortList from './index';
 
-function Status(sortList, e) {
-  const item = e.target.parentNode.parentNode;
-  const index = Array.prototype.indexOf.call(item.parentNode.children, item);
-  sortList[index].completed = e.target.checked;
-  localStorage.clear();
-  for (let i = 0; i < sortList.length; i += 1) {
-    updateStorage(sortList[i]);
+export default function loadCheckboxes() {
+  const checkboxes = document.querySelectorAll('.checkbox');
+  for (let i = 0; i < checkboxes.length; i += 1) {
+    checkboxes[i].addEventListener('click', () => {
+      sortList[i].completed = checkboxes[i].checked;
+      const status = [];
+      for (let j = 0; j < checkboxes.length; j += 1) {
+        status.push(checkboxes[j].checked);
+      }
+      localStorage.setItem('completed', status);
+    }, false);
   }
 }
-
-export default Status;
