@@ -1,5 +1,4 @@
 /* eslint-disable import/no-cycle */
-// import updateStorage from './storage';
 import sortList from './index';
 import onClickDelete from './delete';
 
