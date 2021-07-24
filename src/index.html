@@ -2,10 +2,34 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>Title</title>
+        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+        <title>TO-DO</title>
     </head>
     <body>
-        <h1>*****</h1>
+      <section class="container">
+
+        <div class="listTitle">
+          <h4>To Do or Not To Do</h4>
+          <button type="button">
+            <img src="http://simpleicon.com/wp-content/uploads/refresh.png" width="12" alt="Refresh">
+          </button>
+        </div>
+
+        <div class="addList">
+          <input type='text' id="taskInput" placeholder="Add to your list...">
+          <button type="button">
+            <img src="https://pics.freeicons.io/uploads/icons/png/9100343321560147104-512.png" width="12" alt="Enter">
+          </button>
+        </div>
+
+        <div id="list" class="list">
+        </div>
+
+        <div class="clear">
+          <input type="button" class="clearBtn" value="Clear all completed">
+        </div>
+        
+      </section>
     </body>
     
 </html>
