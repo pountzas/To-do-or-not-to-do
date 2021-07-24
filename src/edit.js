@@ -1,16 +1,33 @@
-import updateStorage from './storage';
-// eslint-disable-next-line import/no-cycle
+/* eslint-disable import/no-cycle */
+// import updateStorage from './storage';
 import sortList from './index';
+import onClickDelete from './delete';
 
-function onClickEdit() {
-  let val = this.value;
-  console.log(val);
+export default function onClickEdit(e) {
+  if (e.target.classList.contains('editable')) {
+    e.target.setAttribute('contenteditable', true);
+    const edit = e.target.parentElement.nextElementSibling;
+    const trash = e.target.parentElement.nextElementSibling.nextElementSibling;
+    edit.setAttribute('hidden', true);
+    trash.removeAttribute('hidden', true);
+
+    const index = e.target.parentElement.firstElementChild.id;
+    trash.addEventListener('click', () => { onClickDelete(index); });
+    e.target.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        const newInput = e.target.textContent;
+        const index = e.target.parentElement.firstElementChild.id;
+        sortList[index].description = newInput;
+        e.target.removeAttribute('contenteditable');
+        edit.removeAttribute('hidden', true);
+        trash.setAttribute('hidden', true);
+        const description = [];
+        for (let j = 0; j < sortList.length; j += 1) {
+          description.push(sortList[j].description);
+          localStorage.setItem('description', description);
+        }
+      }
+    });
+  }
 }
-
-function onClickExit() {
-  let val = this.value;
-}
-
-const edit = document.querySelector('.edit').addEventListener('click', onClickEdit);
-
-export default { onClickEdit, onClickExit }
