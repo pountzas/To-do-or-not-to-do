@@ -1,8 +1,8 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# TITLE
+# To Do List
 
-> This is an app...
+> This is an app which allows you to create a list of pending tasks to finish, you can add tasks, mark them as completed, and delete them.
 
 
 ## Built With
@@ -13,7 +13,7 @@
 - Webpack-cli
 ## Live Demo
 
-<!-- [My Transactions App Live!](URL) -->
+[To-do-or-not-to-do App Live!](https://pountzas.github.io/To-do-or-not-to-do/)
 
 ## Getting Started
 
@@ -21,16 +21,16 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
   
-- NODE.js
+- Node.js
 
 ### Setup
 
 - Use your github account and your terminal to clone this repository to your computer:
 
-`repo link ***************`
+`https://github.com/pountzas/To-do-or-not-to-do.git`
 
 - Go to the cloned directory:
-`cd repo folder ***********`
+`cd To-do-or-not-to-do.git`
 
 - Run the following command to install dependencies:
 `npm install`
@@ -56,13 +56,13 @@ Run dist/index.html in your preferred browser.
 
 - GitHub: [pountzas](https://github.com/pountzas)
 - Twitter: [@pountzas20](https://twitter.com/pountzas20)
-- LinkedIn: [Nikos Pountzas](https://www.linkedin.com/in/nik
+- LinkedIn: [Nikos Pountzas](https://www.linkedin.com/in/nikos-pountzas/)
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](URL).
+Feel free to check the [issues page](https://github.com/pountzas/To-do-or-not-to-do/issues).
 
 ## Show your support
 
