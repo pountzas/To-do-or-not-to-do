@@ -6,9 +6,6 @@ const taskInput = document.querySelector('#taskInput');
 
 export default function addTask(e) {
   e.preventDefault();
-  if (taskInput.value === '') {
-    MessageEvent('Add a task');
-  }
 
   const obj = {
     description: taskInput.value,
