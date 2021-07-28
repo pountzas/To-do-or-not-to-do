@@ -1,5 +1,5 @@
 // eslint-disable-next-line import/no-cycle
-import sortList from './index';
+import sortList from './sortList';
 
 export default function loadCheckboxes() {
   const checkboxes = document.querySelectorAll('.checkbox');

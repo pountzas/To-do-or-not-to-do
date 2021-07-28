@@ -1,6 +1,6 @@
 import updateStorage from './storage';
 // eslint-disable-next-line import/no-cycle
-import sortList from './index';
+import sortList from './sortList';
 
 let dragged;
 const listDiv = document.getElementById('list');

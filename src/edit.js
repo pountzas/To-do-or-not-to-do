@@ -1,5 +1,5 @@
 /* eslint-disable import/no-cycle */
-import sortList from './index';
+import sortList from './sortList';
 import onClickDelete from './delete';
 
 export default function onClickEdit(e) {
