@@ -24,3 +24,11 @@ document.body.innerHTML = `<input id="taskInput" value="Something">
     <i class="far fa-calendar-plus"></i>
     <div id="list"></div>
     <i class="clearBtn"></i>`;
+
+describe('Testing the onClickClear function', () => {
+
+});
+
+describe('Testing the onClickDelete function', () => {
+
+});
