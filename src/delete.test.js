@@ -32,6 +32,8 @@ describe('Testing the onClickClear function', () => {
     localStorage.setItem('index', '0,1,2');
     localStorage.setItem('description', 'Task 1,Task 2,Task 3');
 
+    const taskInput = document.querySelector('.clearBtn');
+
   });
 });
 
