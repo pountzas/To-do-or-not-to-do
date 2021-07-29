@@ -65,7 +65,6 @@ describe('Testing the onClickClear function', () => {
 
     taskInput.click();
     expect(onClickClear().length).not.toBe(2);
-
   });
 });
 
@@ -100,9 +99,5 @@ describe('Testing the onClickDelete function', () => {
     taskInput.click();
 
     expect(onClickDelete().length).not.toBe(2);
-
-
-
   });
-
 });
