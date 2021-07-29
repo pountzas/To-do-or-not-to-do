@@ -93,6 +93,10 @@ describe('Testing the onClickDelete function', () => {
       index: 2,
     }];
 
+    taskInput.addEventListener('click', () => {
+      sortList = onClickDelete();
+    });
+
 
   });
 
