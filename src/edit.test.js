@@ -51,5 +51,8 @@ describe('Testing onClickEditable function', () => {
             index: 2,
           }];
         const tasks = document.getElementsByClassName('editable')
+        for (let i = 0; i < tasks.length; i += 1) {
+            tasks[i].addEventListener('click', () => { onClickEdit(i); });
+        }
     });
 });
