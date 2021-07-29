@@ -97,6 +97,11 @@ describe('Testing the onClickDelete function', () => {
       sortList = onClickDelete();
     });
 
+    taskInput.click();
+
+    expect(onClickDelete().length).not.toBe(2);
+
+
 
   });
 
