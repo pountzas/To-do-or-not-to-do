@@ -26,7 +26,9 @@ document.body.innerHTML = `<input id="taskInput" value="Something">
     <i class="clearBtn"></i>`;
 
 describe('Testing the onClickClear function', () => {
-
+  test('it sould remove the completed tasks from the sortList', () => {
+    
+  });
 });
 
 describe('Testing the onClickDelete function', () => {
