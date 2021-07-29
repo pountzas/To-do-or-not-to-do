@@ -71,6 +71,10 @@ describe('Testing the onClickClear function', () => {
 
 describe('Testing the onClickDelete function', () => {
   test('it sould remove the completed tasks from the sortList', () => {
+    global.localStorage = new LocalStorageMock();
+    localStorage.setItem('completed', 'true,false,true');
+    localStorage.setItem('index', '0,1,2');
+    localStorage.setItem('description', 'Task 1,Task 2,Task 3');
 
   });
 
