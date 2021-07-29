@@ -35,5 +35,20 @@ describe('Testing onClickEditable function', () => {
         localStorage.setItem('status', 'true,false,true');
         localStorage.setItem('index', '0,1,2');
 
+        let sortList = [{
+            description: 'Task 1',
+            completed: 'true',
+            index: 0,
+          },
+          {
+            description: 'Task 2',
+            completed: 'false',
+            index: 1,
+          },
+          {
+            description: 'Task 3',
+            completed: 'true',
+            index: 2,
+          }];
     });
 });
