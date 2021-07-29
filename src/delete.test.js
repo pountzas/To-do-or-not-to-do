@@ -77,6 +77,23 @@ describe('Testing the onClickDelete function', () => {
     localStorage.setItem('description', 'Task 1,Task 2,Task 3');
     const taskInput = document.querySelector('.clearBtn');
 
+    let sortList = [{
+      description: 'Task 1',
+      completed: 'true',
+      index: 0,
+    },
+    {
+      description: 'Task 2',
+      completed: 'false',
+      index: 1,
+    },
+    {
+      description: 'Task 3',
+      completed: 'true',
+      index: 2,
+    }];
+
+
   });
 
 });
