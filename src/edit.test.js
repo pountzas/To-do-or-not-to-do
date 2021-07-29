@@ -29,5 +29,7 @@ document.body.innerHTML = `<input id="taskInput" value="Something">
     </div>
     <i class="clearBtn"></i>`;
 describe('Testing onClickEditable function', () => {
+    test('Should update the task description', () => {
 
+    });
 });
