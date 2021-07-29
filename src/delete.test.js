@@ -70,5 +70,8 @@ describe('Testing the onClickClear function', () => {
 });
 
 describe('Testing the onClickDelete function', () => {
+  test('it sould remove the completed tasks from the sortList', () => {
+
+  });
 
 });
