@@ -50,5 +50,6 @@ describe('Testing onClickEditable function', () => {
             completed: 'true',
             index: 2,
           }];
+        const tasks = document.getElementsByClassName('editable')
     });
 });
