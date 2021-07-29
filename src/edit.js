@@ -1,6 +1,6 @@
 /* eslint-disable import/no-cycle */
 import sortList from './sortList';
-import onClickDelete from './delete';
+import onClickDelete from './deleteOne';
 
 export default function onClickEdit(e) {
   if (e.target.classList.contains('editable')) {
