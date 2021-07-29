@@ -54,7 +54,9 @@ describe('Testing the onClickClear function', () => {
       sortList = onClickClear();
     });
 
-
+    taskInput.click();
+    expect(onClickClear().length).not.toBe(2);
+    
   });
 });
 
