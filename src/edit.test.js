@@ -30,6 +30,10 @@ document.body.innerHTML = `<input id="taskInput" value="Something">
     <i class="clearBtn"></i>`;
 describe('Testing onClickEditable function', () => {
     test('Should update the task description', () => {
+        global.localStorage = new LocalStorageMock();
+        localStorage.setItem('description', 'Task 1,Task 2,Task 3');
+        localStorage.setItem('status', 'true,false,true');
+        localStorage.setItem('index', '0,1,2');
 
     });
 });
