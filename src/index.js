@@ -9,13 +9,13 @@ import dragOver from './drag';
 import drop from './drag';
 import addTask from './add';
 import onClickClear from './delete';
-import onClickDelete from './delete';
 import onClickEdit from './edit';
 import sortList from './sortList';
 
 // Define UI vars
 const listDiv = document.getElementById('list');
 const addList = document.querySelector('.addList');
+const clearBtn = document.getElementById('clearBtn');
 
 // eslint-disable-next-line no-unused-expressions
 dragStart; dragEnd; dragOver; drop; onClickEdit;
@@ -43,7 +43,7 @@ function listShow() {
 
 window.onload = listShow();
 
-document.querySelector('.clearBtn').addEventListener('click', () => { onClickClear(); });
+clearBtn.addEventListener('click', () => { onClickClear(); });
 listDiv.addEventListener('click', onClickEdit);
 
 // Add Task
