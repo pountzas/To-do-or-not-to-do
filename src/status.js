@@ -13,4 +13,5 @@ export default function loadCheckboxes() {
       localStorage.setItem('completed', status);
     }, false);
   }
+  return sortList;
 }
