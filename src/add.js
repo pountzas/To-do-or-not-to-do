@@ -1,14 +1,10 @@
 import updateStorage from './storage';
 // eslint-disable-next-line import/no-cycle
-import sortList from './index';
-
-const taskInput = document.querySelector('#taskInput');
+import sortList from './sortList';
 
 export default function addTask(e) {
+  const taskInput = document.querySelector('#taskInput');
   e.preventDefault();
-  if (taskInput.value === '') {
-    MessageEvent('Add a task');
-  }
 
   const obj = {
     description: taskInput.value,
@@ -19,6 +15,6 @@ export default function addTask(e) {
   sortList.push(obj);
   updateStorage(obj);
   taskInput.value = '';
-  // eslint-disable-next-line no-restricted-globals
-  location.reload();
+
+  return sortList;
 }

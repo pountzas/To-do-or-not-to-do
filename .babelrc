@@ -1,11 +1,11 @@
 {
-    "plugins": ["@babel/syntax-dynamic-import"],
-    "presets": [
-        [
-            "@babel/preset-env",
-            {
-                "modules": false
-            }
-        ]
-    ]
+  "plugins": ["@babel/syntax-dynamic-import", "@babel/plugin-transform-modules-commonjs"],
+  "presets": [
+      [
+          "@babel/preset-env",
+          {
+              "modules": false
+          }
+      ]
+  ]
 }

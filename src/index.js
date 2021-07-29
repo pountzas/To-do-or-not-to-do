@@ -8,32 +8,19 @@ import dragEnd from './drag';
 import dragOver from './drag';
 import drop from './drag';
 import addTask from './add';
-import updateStorage from './storage';
 import onClickClear from './delete';
-import onClickDelete from './delete';
 import onClickEdit from './edit';
+import sortList from './sortList';
 
 // Define UI vars
 const listDiv = document.getElementById('list');
 const addList = document.querySelector('.addList');
+const clearBtn = document.getElementById('clearBtn');
 
 // eslint-disable-next-line no-unused-expressions
 dragStart; dragEnd; dragOver; drop; onClickEdit;
 
-// eslint-disable-next-line import/no-mutable-exports
-const descr = localStorage.getItem('description') ? localStorage.getItem('description').split(',') : [];
-const completed = localStorage.getItem('completed') ? localStorage.getItem('completed').split(',') : [];
-const sortList = [];
-for (let i = 0; i < completed.length; i += 1) {
-  const obj = {
-    description: descr[i],
-    completed: completed[i],
-    index: i,
-  };
-  sortList.push(obj);
-}
-
-export function listShow() {
+function listShow() {
   const container = document.getElementById('list');
   container.innerHTML = '';
   for (let i = 0; i < sortList.length; i += 1) {
@@ -56,11 +43,10 @@ export function listShow() {
 
 window.onload = listShow();
 
+clearBtn.addEventListener('click', () => { onClickClear(); });
 listDiv.addEventListener('click', onClickEdit);
 
 // Add Task
 addList.addEventListener('change', addTask);
 
 loadCheckboxes();
-
-export default sortList;

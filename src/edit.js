@@ -1,13 +1,13 @@
 /* eslint-disable import/no-cycle */
-import sortList from './index';
-import onClickDelete from './delete';
+import sortList from './sortList';
+import onClickDelete from './deleteOne';
 
 export default function onClickEdit(e) {
   if (e.target.classList.contains('editable')) {
     e.target.setAttribute('contenteditable', true);
     const edit = e.target.parentElement.nextElementSibling;
     const trash = e.target.parentElement.nextElementSibling.nextElementSibling;
-    edit.setAttribute('hidden', true);
+    edit.setAttribute('hidden', false);
     trash.removeAttribute('hidden', true);
 
     const index = e.target.parentElement.firstElementChild.id;
@@ -20,7 +20,7 @@ export default function onClickEdit(e) {
         sortList[index].description = newInput;
         e.target.removeAttribute('contenteditable');
         edit.removeAttribute('hidden', true);
-        trash.setAttribute('hidden', true);
+        trash.setAttribute('hidden', false);
         const description = [];
         for (let j = 0; j < sortList.length; j += 1) {
           description.push(sortList[j].description);
