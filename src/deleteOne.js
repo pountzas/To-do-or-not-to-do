@@ -9,6 +9,6 @@ export default function onClickDelete(index) {
     sortList[i].index = i;
     updateStorage(sortList[i]);
   }
-  location.reload();
+
   return sortList;
 }

@@ -15,7 +15,6 @@ export default function addTask(e) {
   sortList.push(obj);
   updateStorage(obj);
   taskInput.value = '';
-  // eslint-disable-next-line no-restricted-globals
-  location.reload();
+
   return sortList;
 }

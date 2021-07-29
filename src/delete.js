@@ -13,6 +13,6 @@ export default function onClickClear() {
     sortList[i].index = i;
     updateStorage(sortList[i]);
   }
-  location.reload();
+
   return sortList;
 }
