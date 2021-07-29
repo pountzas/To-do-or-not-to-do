@@ -1,3 +1,12 @@
+/**
+ * @jest-environment jsdom
+ */
+/* eslint-disable import/no-duplicates */
+/* eslint-disable no-unused-vars */
+
+import onClickClear from './delete';
+import onClickDelete from './deleteOne';
+
 class LocalStorageMock {
   constructor() {
     this.store = {};
@@ -56,7 +65,7 @@ describe('Testing the onClickClear function', () => {
 
     taskInput.click();
     expect(onClickClear().length).not.toBe(2);
-    
+
   });
 });
 
