@@ -28,3 +28,6 @@ document.body.innerHTML = `<input id="taskInput" value="Something">
         <div><p contenteditable="true" class="editable" content>task3</p></div>
     </div>
     <i class="clearBtn"></i>`;
+describe('Testing onClickEditable function', () => {
+
+});
