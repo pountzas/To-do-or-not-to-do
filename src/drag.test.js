@@ -1,3 +1,14 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable import/no-duplicates */
+/**
+ * @jest-environment jsdom
+ */
+
+import dragStart from './drag';
+import dragEnd from './drag';
+import dragOver from './drag';
+import drop from './drag';
+
 class LocalStorageMock {
   constructor() {
     this.store = {};
@@ -47,3 +58,17 @@ describe('Testing the drop function', () => {
       index: 2,
     },
     ];
+
+    const localMock = [];
+    for (let i = 0; i < sortList.length; i += 1) {
+      localMock.push(sortList[i]);
+      const taskInput = document.getElementById('taskInput');
+      taskInput.addEventListener('click', (e) => {
+        drop(e);
+      });
+    }
+
+    expect(localMock[1].index).toBe(1);
+    expect(localMock).toStrictEqual(sortList);
+  });
+});

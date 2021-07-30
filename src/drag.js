@@ -37,6 +37,7 @@ const drop = document.addEventListener('drop', (event) => {
       updateStorage(obj);
     }
   }
+  return sortList;
 }, false);
 
 export default {
