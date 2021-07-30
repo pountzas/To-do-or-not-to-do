@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 
-import loadCheckboxes from "./status";
+import loadCheckboxes from './status';
 
 class LocalStorageMock {
   constructor() {
