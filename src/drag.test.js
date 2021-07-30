@@ -19,3 +19,9 @@ class LocalStorageMock {
     delete this.store[key];
   }
 }
+
+document.body.innerHTML = `<input id="taskInput" value="Something">
+    <i class="far fa-calendar-plus"></i>
+    <div id="list"></div>
+    <i class="clearBtn"></i>`;
+
