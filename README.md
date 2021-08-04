@@ -2,7 +2,7 @@
 
 # To Do List
 
-> This is an app which allows you to create a list of pending tasks to finish, you can add tasks, mark them as completed, and delete them.
+> This is an app that allows you to create a list of pending tasks to finish, you can add tasks, mark them as completed, and delete them.
 
 
 ## Built With
